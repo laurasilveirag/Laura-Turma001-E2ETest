@@ -15,12 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4.1.1
     - name: Use Node.js lts/*
-      uses: actions/setup-node@v4.0.0
+      uses: actions/setup-node@v4 
       with:
         node-version: lts/*
         cache: 'npm'
     - run: npm install 
-    - run: npx playwright install      
+    - run: npx playwright install       
     - run: npm run actions
 
   sonarcloud:
@@ -29,13 +29,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
         with:
-          fetch-depth: 0
+          fetch-depth: 0 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.0
+        uses: actions/setup-node@v4 
         with:
-          node-version: 21 
+          node-version: 'lts/*' 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2.0.2      
+        uses: SonarSource/sonarcloud-github-action@v2.0.2       
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.AUTOMATION_TOKEN }}
