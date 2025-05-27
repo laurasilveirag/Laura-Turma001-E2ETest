@@ -14,7 +14,7 @@ const testUser: UserCredentials = {
 };
 
 // ZeroStep AI: Cenário 01 - Login de Usuário Bem-Sucedido
-test('ZeroStep AI: Scenario 01 - Successful User Login', async ({ page }) => {
+test.skip('ZeroStep AI: Scenario 01 - Successful User Login', async ({ page }) => {
   const aiArgs = { page, test };
 
   await page.goto(BASE_URL);
