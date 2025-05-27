@@ -13,7 +13,7 @@
 Para executar este projeto, siga os passos abaixo:
 
 1. Instale o [Node.js](https://nodejs.org/) (versão >= 20.x)
-2. Execute `npm i --save-dev` para instalar todas as dependências do projeto
+2. Execute `npm i --save-dev` para  instalar todas as dependências do projeto
 3. Execute `npx playwright install` para instalar os navegadores usados pelo Playwright
 4. Execute `npm run ci` para rodar toda a suíte de testes
 5. Execute `npm run show-report` para visualizar os relatórios
