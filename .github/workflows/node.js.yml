@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4.1.1
-    - name: Use Node.js 21
+    - name: Use Node.js lts/*
       uses: actions/setup-node@v4.0.0
       with:
-        node-version: 21
+        node-version: lts/*
         cache: 'npm'
     - run: npm install 
     - run: npx playwright install      
